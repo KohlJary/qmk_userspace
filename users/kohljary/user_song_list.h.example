@@ -1,0 +1,14 @@
+#pragma once
+
+// Copy to user_song_list.h (git-ignored) and add songs. song_list.h includes it if it exists, and names
+// defined here replace upstream's empty placeholders (MEGALOVANIA, ZELDA_*, ...). Keep transcriptions of
+// copyrighted songs in the ignored file, not in the repo.
+//
+// Timing: QMK's note names are off by four. 64 units (W__NOTE) is one beat, so at the default
+// TEMPO_DEFAULT 120 a musical sixteenth is Q__NOTE (16 units), an eighth is H__NOTE (32) and a dotted
+// eighth is HD_NOTE (48). Repeated pitches need a rest between them or they merge into one tone, so most
+// notes are written as sound + rest within their slot, which also gives the riff its staccato.
+
+// Example: an original four-note rising chime (one beat at the default tempo), to show the shape.
+// #define STARTUP_SONG SONG(KJ_CHIME) in the Moonlander keymap's config.h to use it.
+#define KJ_CHIME     Q__NOTE(_C5), Q__NOTE(_E5), Q__NOTE(_G5), Q__NOTE(_C6)

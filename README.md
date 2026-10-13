@@ -93,8 +93,16 @@ Add the three includes above to its keymap.c.
 The Moonlander has a speaker (audio is on in its keyboard.json). Set the songs in the Moonlander keymap's
 config.h:
 
-    #define STARTUP_SONG SONG(ZELDA_TREASURE)     // any name from quantum/audio/song_list.h
-    #define GOODBYE_SONG SONG(MARIO_GAMEOVER)     // plays when jumping to the bootloader
+    #define STARTUP_SONG SONG(MEGALOVANIA)
+    #define GOODBYE_SONG SONG(GOODBYE_SOUND)      // plays when jumping to the bootloader
+
+Most named songs in quantum/audio/song_list.h (MEGALOVANIA, ZELDA_*, MARIO_*, ...) are empty
+placeholders upstream; only QMK's own sounds and a few classical pieces are real. Define the others in
+users/kohljary/user_song_list.h, which is git-ignored: copy user_song_list.h.example (timing notes and
+an example) to start. Transcriptions of copyrighted songs stay out of the repo, as upstream intends.
+
+After adding or removing user_song_list.h, build with 'qmk compile -c' (clean): make doesn't notice a
+header that __has_include starts finding, so audio.c isn't rebuilt and the song stays empty.
 
 or write one with the note macros from quantum/audio/musical_notes.h:
 

@@ -11,3 +11,6 @@ secrets.h
 .task
 *.data
 filter.history
+
+# Song transcriptions (copyrighted melodies stay local; see user_song_list.h.example)
+user_song_list.h
