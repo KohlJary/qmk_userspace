@@ -19,3 +19,6 @@
 #pragma once
 
 #define ORYX_CONFIGURATOR
+
+// Startup jingle (quantum/audio/song_list.h); GOODBYE_SONG plays on jump to bootloader
+#define STARTUP_SONG SONG(MEGALOVANIA)
