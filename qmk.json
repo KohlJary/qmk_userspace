@@ -1,0 +1,8 @@
+{
+    "userspace_version": "1.0",
+    "build_targets": [
+        ["zsa/moonlander", "kohljary"],
+        ["keychron/q0/base", "kohljary"],
+        ["keychron/q9_plus/ansi_encoder", "kohljary"]
+    ]
+}

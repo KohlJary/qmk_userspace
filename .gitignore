@@ -1,0 +1,13 @@
+# Personal details for leader sequences
+secrets.h
+
+# Build output (contains the secrets.h strings)
+*.bin
+*.hex
+*.uf2
+.build/
+
+# Taskwarrior files that used to end up in the qmk tree
+.task
+*.data
+filter.history
